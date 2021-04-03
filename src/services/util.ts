@@ -25,3 +25,6 @@ export const chunkArray = <T>(arr: T[], n: number) => {
   }
   return chunks;
 };
+
+export const formatBonus = (bonus: number) =>
+  bonus > 0 ? `+${bonus}` : `${bonus}`;

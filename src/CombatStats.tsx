@@ -1,5 +1,5 @@
 import { ICharacter } from './services/character.generator';
-import { getModifier, getRndInteger } from './services/util';
+import { formatBonus, getModifier, getRndInteger } from './services/util';
 
 const CombatStats = ({ character }: { character: ICharacter }) => {
   const hp =
@@ -14,8 +14,8 @@ const CombatStats = ({ character }: { character: ICharacter }) => {
             Base Attack Bonus (melee, ranged)
           </span>
           <span className="ml-2">
-            +0 ({getModifier(character.attributes.str)}/
-            {getModifier(character.attributes.dex)})
+            +0 ({formatBonus(getModifier(character.attributes.str))},
+            {formatBonus(getModifier(character.attributes.dex))})
           </span>
           <span className="ml-2 font-weight-bold">Armor Class</span>
           <span className="ml-2">
