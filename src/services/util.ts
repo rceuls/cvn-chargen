@@ -11,3 +11,6 @@ export const getModifier = (score: number) => {
 
 export const getRndInteger = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
+
+export const getRndValue = <T>(input: T[]) =>
+  input[getRndInteger(0, input.length - 1)];

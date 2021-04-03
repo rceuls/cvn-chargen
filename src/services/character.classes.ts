@@ -6,7 +6,7 @@ import {
   thiefPacks,
 } from './equipment';
 import { gods } from './gods';
-import { getRndInteger } from './util';
+import { getRndInteger, getRndValue } from './util';
 
 export interface ICharacterClass {
   name: string;
@@ -33,8 +33,8 @@ const cleric: ICharacterClass = {
   savingThrows: [11, 12, 14, 16, 15],
   url: '/Cleric',
   abilities: ['Turn Undead'],
-  suffix: `You worship ${gods[getRndInteger(0, gods.length - 1)]}.`,
-  equipment: clericPacks[getRndInteger(0, clericPacks.length - 1)],
+  suffix: `You worship ${getRndValue(gods)}.`,
+  equipment: getRndValue(clericPacks),
 };
 
 const dwarf: ICharacterClass = {
@@ -48,7 +48,7 @@ const dwarf: ICharacterClass = {
     "Infravision (60')",
     'Listen at doors (2-in-6)',
   ],
-  equipment: fighterPacks[getRndInteger(0, fighterPacks.length - 1)],
+  equipment: getRndValue(fighterPacks),
 };
 
 const elf: ICharacterClass = {
@@ -63,7 +63,7 @@ const elf: ICharacterClass = {
     "Infravision (60')",
     'Listen at doors (2-in-6)',
   ],
-  equipment: fighterPacks[getRndInteger(0, fighterPacks.length - 1)],
+  equipment: getRndValue(fighterPacks),
 };
 
 const fighter: ICharacterClass = {
@@ -72,7 +72,7 @@ const fighter: ICharacterClass = {
   savingThrows: [12, 13, 14, 15, 16],
   url: '/Fighter',
   abilities: [],
-  equipment: fighterPacks[getRndInteger(0, fighterPacks.length - 1)],
+  equipment: getRndValue(fighterPacks),
 };
 
 const halfling: ICharacterClass = {
@@ -86,7 +86,7 @@ const halfling: ICharacterClass = {
     'Listen at doors (2-in-6)',
     'Missile attack bonus (+1)',
   ],
-  equipment: fighterPacks[getRndInteger(0, fighterPacks.length - 1)],
+  equipment: getRndValue(fighterPacks),
 };
 
 const magicUser: ICharacterClass = {
@@ -95,7 +95,7 @@ const magicUser: ICharacterClass = {
   savingThrows: [13, 14, 13, 16, 15],
   url: '/Magic-User',
   abilities: ['Arcane Magic (unarmoured only)'],
-  equipment: magicUserPacks[getRndInteger(0, magicUserPacks.length - 1)],
+  equipment: getRndValue(magicUserPacks),
 };
 
 const thief: ICharacterClass = {
@@ -107,7 +107,7 @@ const thief: ICharacterClass = {
     'Thief skills',
     'Backstab (+4 to hit and double damage when attacking an unaware opponent from behind)',
   ],
-  equipment: thiefPacks[getRndInteger(0, thiefPacks.length - 1)],
+  equipment: getRndValue(thiefPacks),
 };
 
 export const getClass = (attributes: number[]) => {
@@ -144,5 +144,5 @@ export const getClass = (attributes: number[]) => {
   if (max === attributes[+CharacterAttributes.WIS]) {
     avClasses = [cleric];
   }
-  return avClasses[getRndInteger(0, avClasses.length - 1)];
+  return getRndValue(avClasses);
 };
