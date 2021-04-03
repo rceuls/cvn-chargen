@@ -83,7 +83,7 @@ const fighter: ICharacterClass = {
   url: '/Fighter',
   abilities: [],
   equipment: getRndValue(fighterPacks),
-  image: getRndValue(imagesElf),
+  image: getRndValue(imagesHuman),
 };
 
 const halfling: ICharacterClass = {
