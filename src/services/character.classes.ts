@@ -144,5 +144,5 @@ export const getClass = (attributes: number[]) => {
   if (max === attributes[+CharacterAttributes.WIS]) {
     avClasses = [cleric];
   }
-  return avClasses[getRndInteger(0, avClasses.length)];
+  return avClasses[getRndInteger(0, avClasses.length - 1)];
 };
