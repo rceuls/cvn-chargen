@@ -73,7 +73,7 @@ const magicUser: ICharacterClass = {
     startingHP: 4,
     savingThrows: [13,14,13,16,15],
     url: "/Magic-User",
-    abilities: ["Arcane Magic"],
+    abilities: ["Arcane Magic (unarmoured only)"],
     equipment: magicUserPacks[getRndInteger(0, magicUserPacks.length - 1)]
 };
 
