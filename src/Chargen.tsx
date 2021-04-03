@@ -42,6 +42,17 @@ const Chargen = () => {
       <GenericArrayOverview data={genChar.charClass.abilities} />
       <hr />
       <GenericArrayOverview data={genChar.charClass.equipment.equipment} />
+      <hr />
+      <div className="row">
+        <div className="col-sm">
+          <img
+            className="img-thumbnail"
+            style={{ maxWidth: 200, maxHeight: 200, aspectRatio: 'auto' }}
+            src={`${process.env.PUBLIC_URL}/portraits/${genChar.charClass.image}`}
+            alt="your portrait"
+          />
+        </div>
+      </div>
     </>
   );
 };

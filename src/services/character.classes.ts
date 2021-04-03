@@ -6,6 +6,12 @@ import {
   thiefPacks,
 } from './equipment';
 import { gods } from './gods';
+import {
+  imagesDwarves,
+  imagesElf,
+  imagesHalflings,
+  imagesHuman,
+} from './portraits';
 import { getRndValue } from './util';
 
 export interface ICharacterClass {
@@ -16,6 +22,7 @@ export interface ICharacterClass {
   abilities: string[];
   suffix?: string;
   equipment: IEquipmentPack;
+  image: string;
 }
 
 enum CharacterAttributes {
@@ -35,6 +42,7 @@ const cleric: ICharacterClass = {
   abilities: ['Turn Undead'],
   suffix: `You worship ${getRndValue(gods)}.`,
   equipment: getRndValue(clericPacks),
+  image: getRndValue(imagesHuman),
 };
 
 const dwarf: ICharacterClass = {
@@ -49,6 +57,7 @@ const dwarf: ICharacterClass = {
     'Listen at doors (2-in-6)',
   ],
   equipment: getRndValue(fighterPacks),
+  image: getRndValue(imagesDwarves),
 };
 
 const elf: ICharacterClass = {
@@ -64,6 +73,7 @@ const elf: ICharacterClass = {
     'Listen at doors (2-in-6)',
   ],
   equipment: getRndValue(fighterPacks),
+  image: getRndValue(imagesHuman),
 };
 
 const fighter: ICharacterClass = {
@@ -73,6 +83,7 @@ const fighter: ICharacterClass = {
   url: '/Fighter',
   abilities: [],
   equipment: getRndValue(fighterPacks),
+  image: getRndValue(imagesElf),
 };
 
 const halfling: ICharacterClass = {
@@ -87,6 +98,7 @@ const halfling: ICharacterClass = {
     'Missile attack bonus (+1)',
   ],
   equipment: getRndValue(fighterPacks),
+  image: getRndValue(imagesHalflings),
 };
 
 const magicUser: ICharacterClass = {
@@ -96,6 +108,7 @@ const magicUser: ICharacterClass = {
   url: '/Magic-User',
   abilities: ['Arcane Magic (unarmoured only)'],
   equipment: getRndValue(magicUserPacks),
+  image: getRndValue(imagesHuman),
 };
 
 const thief: ICharacterClass = {
@@ -108,6 +121,7 @@ const thief: ICharacterClass = {
     'Backstab (+4 to hit and double damage when attacking an unaware opponent from behind)',
   ],
   equipment: getRndValue(thiefPacks),
+  image: getRndValue(imagesHuman),
 };
 
 export const getClass = (attributes: number[]) => {
