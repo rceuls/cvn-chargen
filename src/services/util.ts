@@ -1,5 +1,5 @@
 export const getModifier = (score: number) => {
-  if (score <= 3) return -3
+  if (score <= 3) return -3;
   if (score <= 5) return -2;
   if (score <= 8) return -1;
   if (score <= 12) return 0;
@@ -9,4 +9,5 @@ export const getModifier = (score: number) => {
   return 0;
 };
 
-export const getRndInteger = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) ) + min;
+export const getRndInteger = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
