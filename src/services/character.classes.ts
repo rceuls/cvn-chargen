@@ -73,7 +73,7 @@ const elf: ICharacterClass = {
     'Listen at doors (2-in-6)',
   ],
   equipment: getRndValue(fighterPacks),
-  image: getRndValue(imagesHuman),
+  image: getRndValue(imagesElf),
 };
 
 const fighter: ICharacterClass = {
