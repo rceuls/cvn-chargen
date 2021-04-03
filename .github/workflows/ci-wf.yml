@@ -8,19 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
 
-      - name: use NodeJS ${{ matrix.node-version }}
+      - name: Use NodeJS ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: install dependencies
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Dependencies
         run: npm install
 
-      - name: build
+      - name: Build
         run: npm run build
 
       - name: Deploy
