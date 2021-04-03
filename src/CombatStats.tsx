@@ -17,13 +17,18 @@ const CombatStats = ({ character }: { character: ICharacter }) => {
             +0 ({formatBonus(getModifier(character.attributes.str))},
             {formatBonus(getModifier(character.attributes.dex))})
           </span>
-          <span className="ml-2 font-weight-bold">Armor Class</span>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-sm">
+          <span className="font-weight-bold">Armor Class</span>
           <span className="ml-2">
             {10 +
               character.charClass.equipment.acMod +
               getModifier(character.attributes.dex)}
           </span>
-          <span className="ml-2 font-weight-bold">Hit Points</span>
+          <span className="ml-2 font-weight-bold">Maximum Hit Points</span>
           <span className="ml-2">{hp > 0 ? hp : 1}</span>
         </div>
       </div>

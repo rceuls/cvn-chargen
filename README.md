@@ -1,5 +1,7 @@
 # CVN chargen
 
+https://github.com/rceuls/cvn-chargen/workflows/ci-wf/badge.svg
+
 OSE character generator
 
 # Sources
