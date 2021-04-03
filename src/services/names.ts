@@ -159,7 +159,6 @@ export const names = [
 "Ralia",
 "Esmee",
 "Heron",
-"Artwork by Mathew Gil",
 "Naima",
 "Rydna",
 "Sparrow",

@@ -1,3 +1,4 @@
+import { clericPacks, fighterPacks, IEquipmentPack, magicUserPacks, thiefPacks } from "./equipment";
 import { gods } from "./gods";
 import { getRndInteger } from "./util";
 
@@ -7,7 +8,8 @@ export interface ICharacterClass {
     savingThrows: number[],
     url: string,
     abilities: string[],
-    suffix?: string
+    suffix?: string,
+    equipment: IEquipmentPack
 };
 
 enum CharacterAttributes {
@@ -19,14 +21,14 @@ enum CharacterAttributes {
     CHA
 };
 
-const newLocal = "You worship " + gods[getRndInteger(0, gods.length)] + ".";
 const cleric: ICharacterClass = {
     name: "Cleric",
     startingHP: 6,
     savingThrows: [11,12,14,16,15],
     url: "/Cleric",
     abilities: ["Turn Undead"],
-    suffix: newLocal
+    suffix:  `You worship ${gods[getRndInteger(0, gods.length)]}.`,
+    equipment: clericPacks[getRndInteger(0, clericPacks.length)]
 };
 
 const dwarf: ICharacterClass = {
@@ -34,7 +36,9 @@ const dwarf: ICharacterClass = {
     startingHP: 8,
     savingThrows: [8,9,10,13,12],
     url: "/Dwarf",
-    abilities: ["Detect construction tricks (2-in-6)", "Detect room traps (2-in-6)", "Infravision (60')", "Listen at doors (2-in-6)", ]
+    abilities: ["Detect construction tricks (2-in-6)", "Detect room traps (2-in-6)", "Infravision (60')", "Listen at doors (2-in-6)", ],
+    equipment: fighterPacks[getRndInteger(0, fighterPacks.length)]
+
 };
 
 const elf: ICharacterClass = {
@@ -42,7 +46,8 @@ const elf: ICharacterClass = {
     startingHP: 6,
     savingThrows: [12,13,13,15,15],
     url: "/Elf",
-    abilities: ["Arcane Magic", "Detect secret doors (2-in-6)", "Immune to ghoul paralysis", "Infravision (60')", "Listen at doors (2-in-6)"]
+    abilities: ["Arcane Magic (unarmoured only)", "Detect secret doors (2-in-6)", "Immune to ghoul paralysis", "Infravision (60')", "Listen at doors (2-in-6)"],
+    equipment: fighterPacks[getRndInteger(0, fighterPacks.length)]
 };
 
 const fighter: ICharacterClass = {
@@ -50,7 +55,8 @@ const fighter: ICharacterClass = {
     startingHP: 8,
     savingThrows: [12,13,14,15,16],
     url: "/Fighter",
-    abilities: []
+    abilities: [],
+    equipment: fighterPacks[getRndInteger(0, fighterPacks.length)]
 };
 
 const halfling: ICharacterClass = {
@@ -58,7 +64,8 @@ const halfling: ICharacterClass = {
     startingHP: 6,
     savingThrows: [8,9,10,13,12],
     url: "/Halfling",
-    abilities: ["Defensive bonus (+2 AC when attacked by larger-than-human opponents)", "Hiding (90% in woods, 2-6 otherwise, must remain motionless)", "Listen at doors (2-in-6)", "Missile attack bonus (+1)"]
+    abilities: ["Defensive bonus (+2 AC when attacked by larger-than-human opponents)", "Hiding (90% in woods, 2-6 otherwise, must remain motionless)", "Listen at doors (2-in-6)", "Missile attack bonus (+1)"],
+    equipment: fighterPacks[getRndInteger(0, fighterPacks.length)]
 };
 
 const magicUser: ICharacterClass = {
@@ -66,7 +73,8 @@ const magicUser: ICharacterClass = {
     startingHP: 4,
     savingThrows: [13,14,13,16,15],
     url: "/Magic-User",
-    abilities: ["Arcane Magic"]
+    abilities: ["Arcane Magic"],
+    equipment: magicUserPacks[getRndInteger(0, magicUserPacks.length)]
 };
 
 const thief: ICharacterClass = {
@@ -74,7 +82,8 @@ const thief: ICharacterClass = {
     startingHP: 4,
     savingThrows: [13,14,13,16,15],
     url: "/Thief", 
-    abilities: ["Thief skills", "Backstab (+4 to hit and double damage when attacking an unaware opponent from behind)"]
+    abilities: ["Thief skills", "Backstab (+4 to hit and double damage when attacking an unaware opponent from behind)"],
+    equipment: thiefPacks[getRndInteger(0, thiefPacks.length)]
 };
 
 export const getClass = (attributes: number[]) => {
