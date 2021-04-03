@@ -2,7 +2,7 @@
 
 [![CI and CD](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml/badge.svg)](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml)
 
-OSE character generator
+OSE character generator. [Github Page](https://rceuls.github.io/cvn-chargen/).
 
 # Sources
 
