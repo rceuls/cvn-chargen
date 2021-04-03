@@ -1,11 +1,10 @@
 import AttributesOverview from './AttributesOverview';
-import CharacterAbilities from './CharacterAbilities';
 import { generateCharacter } from './services/character.generator';
 import CombatStats from './CombatStats';
 import SavingThrows from './SavingThrows';
-import { getRndInteger } from './services/util';
+import { getRndValue } from './services/util';
 import { names } from './services/names';
-import EquipmentOverview from './EquipmentOverview';
+import GenericArrayOverview from './GenericArrayOverview';
 
 const Chargen = () => {
   const genChar = generateCharacter();
@@ -13,7 +12,7 @@ const Chargen = () => {
     <>
       <div className="row">
         <div className="col-sm">
-          You are {names[getRndInteger(0, names.length - 1)]} the{' '}
+          You are {getRndValue(names)} the{' '}
           <a
             href={
               'https://oldschoolessentials.necroticgnome.com/srd/index.php' +
@@ -40,9 +39,9 @@ const Chargen = () => {
       <hr />
       <CombatStats character={genChar} />
       <hr />
-      <CharacterAbilities character={genChar} />
+      <GenericArrayOverview data={genChar.charClass.abilities} />
       <hr />
-      <EquipmentOverview character={genChar} />
+      <GenericArrayOverview data={genChar.charClass.equipment.equipment} />
     </>
   );
 };

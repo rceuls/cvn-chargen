@@ -6,7 +6,7 @@ import {
   thiefPacks,
 } from './equipment';
 import { gods } from './gods';
-import { getRndInteger, getRndValue } from './util';
+import { getRndValue } from './util';
 
 export interface ICharacterClass {
   name: string;

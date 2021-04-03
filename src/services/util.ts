@@ -14,3 +14,14 @@ export const getRndInteger = (min: number, max: number) =>
 
 export const getRndValue = <T>(input: T[]) =>
   input[getRndInteger(0, input.length - 1)];
+
+export const chunkArray = <T>(arr: T[], n: number) => {
+  const chunkLength = Math.max(arr.length / n, 1);
+  const chunks = [];
+  for (var i = 0; i < n; i++) {
+    if (chunkLength * (i + 1) <= arr.length) {
+      chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
+    }
+  }
+  return chunks;
+};
