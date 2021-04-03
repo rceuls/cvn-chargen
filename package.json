@@ -2,7 +2,7 @@
   "name": "cvn-chargen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https//rceuls.github.io/cvn-chargen",
+  "homepage": "https://rceuls.github.io/cvn-chargen",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
