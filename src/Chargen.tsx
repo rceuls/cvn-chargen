@@ -5,6 +5,7 @@ import CombatStats from './CombatStats';
 import SavingThrows from './SavingThrows';
 import { getRndInteger } from './services/util';
 import { names } from './services/names';
+import EquipmentOverview from './EquipmentOverview';
 
 const Chargen = () => {
   const genChar = generateCharacter();
@@ -12,7 +13,7 @@ const Chargen = () => {
     <>
       <div className="row">
         <div className="col-sm">
-          You are {names[getRndInteger(0, names.length)]} the{' '}
+          You are {names[getRndInteger(0, names.length - 1)]} the{' '}
           <a
             href={
               'https://oldschoolessentials.necroticgnome.com/srd/index.php' +
@@ -40,6 +41,8 @@ const Chargen = () => {
       <CombatStats character={genChar} />
       <hr />
       <CharacterAbilities character={genChar} />
+      <hr />
+      <EquipmentOverview character={genChar} />
     </>
   );
 };

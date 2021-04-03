@@ -1,3 +1,4 @@
+import { spells } from "./spells";
 import { getRndInteger } from "./util";
 
 export interface IEquipmentPack {
@@ -22,14 +23,14 @@ export const fighterPacks: IEquipmentPack[] = [
 ];
 
 export const elfPacks: IEquipmentPack[] = [
-    { equipment: ["Spellbook with 1 level 1 spell", ...fighterPacks[0].equipment], acMod: +5},
-    { equipment: ["Spellbook with 1 level 1 spell", ...fighterPacks[1].equipment], acMod: +4},
-    { equipment: ["Spellbook with 1 level 1 spell", ...fighterPacks[2].equipment], acMod: +2},
+    { equipment: [`Spellbook with read magic, ${spells[getRndInteger(0, spells.length - 1)]}`, ...fighterPacks[0].equipment], acMod: +5},
+    { equipment: [`Spellbook with read magic, ${spells[getRndInteger(0, spells.length - 1)]}`, ...fighterPacks[1].equipment], acMod: +4},
+    { equipment: [`Spellbook with read magic, ${spells[getRndInteger(0, spells.length - 1)]}`, ...fighterPacks[2].equipment], acMod: +2},
 ]
 
 export const magicUserPacks: IEquipmentPack[] = [
-    {equipment: ["Spellbook with 1 level 1 spell", "1 level 1 scroll", "2 Daggers", "Walking Staff", ...basePack], acMod: +0},
-    {equipment: ["Spellbook with 1 level 1 spell", "50 GP", "2 Daggers", "Walking Staff", ...basePack], acMod: +0},
+    {equipment: [`Spellbook with read magic, ${spells[getRndInteger(0, spells.length - 1)]}`, `Scroll of ${spells[getRndInteger(0, spells.length - 1)]}`, "2 Daggers", "Walking Staff", ...basePack], acMod: +0},
+    {equipment: [`Spellbook with read magic, ${spells[getRndInteger(0, spells.length - 1)]}`, "50 GP", "2 Daggers", "Walking Staff", ...basePack], acMod: +0},
 ];
 
 
