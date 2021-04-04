@@ -1,6 +1,7 @@
 # CVN chargen
 
 [![CI and CD](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml/badge.svg)](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml)
+[![codecov](https://codecov.io/gh/rceuls/cvn-chargen/branch/main/graph/badge.svg)](https://codecov.io/gh/rceuls/cvn-chargen)
 
 OSE character generator. [Github Page](https://rceuls.github.io/cvn-chargen/).
 
