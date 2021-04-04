@@ -1,13 +1,12 @@
 import { ICharacter } from './services/character.generator';
-import { names } from './services/names';
-import { getRndValue, getSRDLink } from './services/util';
+import { getSRDLink } from './services/util';
 
 const Personalia = ({ character }: { character: ICharacter }) => {
   return (
     <>
       <div className="row">
         <div className="col-sm">
-          You are {getRndValue(names)} the{' '}
+          You are {character.name} the{' '}
           <a
             href={getSRDLink(character.charClass.url)}
             target="_blank"

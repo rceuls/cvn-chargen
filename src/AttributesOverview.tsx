@@ -1,5 +1,4 @@
 import { CharacterAttributes } from './services/character.classes';
-import { ICharacter } from './services/character.generator';
 import { formatBonus, getModifier } from './services/util';
 
 const attributeOrder: CharacterAttributes[] = [
@@ -11,7 +10,13 @@ const attributeOrder: CharacterAttributes[] = [
   CharacterAttributes.CHA,
 ];
 
-const AttributesOverview = ({ character }: { character: ICharacter }) => {
+const AttributesOverview = ({
+  attributes,
+  calculateBonusXP,
+}: {
+  attributes: number[];
+  calculateBonusXP: (input: number[]) => string;
+}) => {
   return (
     <>
       <div className="row">
@@ -23,8 +28,7 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
                   {CharacterAttributes[a]}
                 </span>
                 <span className="ml-2 mr-2">
-                  {character.attributesArray[+a]} (
-                  {formatBonus(getModifier(character.attributesArray[+a]))})
+                  {attributes[+a]} ({formatBonus(getModifier(attributes[+a]))})
                 </span>
               </>
             );
@@ -34,9 +38,7 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
       <div className="row">
         <div className="col-sm">
           <span className="font-weight-bold">Bonus XP</span>
-          <span className="ml-2">
-            {character.charClass.bonusXP(character.attributesArray)}
-          </span>
+          <span className="ml-2">{calculateBonusXP(attributes)}</span>
         </div>
       </div>
       <hr />

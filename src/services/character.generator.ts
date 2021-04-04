@@ -1,9 +1,11 @@
 import { getClass, ICharacterClass } from './character.classes';
-import { getRndInteger } from './util';
+import { names } from './names';
+import { getRndInteger, getRndValue } from './util';
 
 export interface ICharacter {
+  name: string;
   charClass: ICharacterClass;
-  attributesArray: number[];
+  attributeScores: number[];
 }
 
 const getAttribute = () => {
@@ -25,8 +27,9 @@ export const generateCharacter = () => {
   }
 
   const genChar: ICharacter = {
+    name: getRndValue(names),
     charClass: selectedClass,
-    attributesArray: attributes,
+    attributeScores: attributes,
   };
   return genChar;
 };

@@ -12,8 +12,11 @@ const Chargen = () => {
   return (
     <>
       <Personalia character={genChar} />
-      <AttributesOverview character={genChar} />
-      <SavingThrows character={genChar} />
+      <AttributesOverview
+        attributes={genChar.attributeScores}
+        calculateBonusXP={genChar.charClass.bonusXP}
+      />
+      <SavingThrows savingThrows={genChar.charClass.savingThrows} />
       <CombatStats character={genChar} />
       <GenericArrayOverview data={genChar.charClass.abilities} />
       <SpellsOverview data={genChar.charClass.spells ?? []} />
