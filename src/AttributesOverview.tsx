@@ -21,10 +21,6 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
             {character.attributes.con} (
             {formatBonus(getModifier(character.attributes.con))})
           </span>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-sm">
           <span className="font-weight-bold">INT</span>
           <span className="ml-2">
             {character.attributes.int} (
@@ -39,6 +35,14 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
           <span className="ml-2">
             {character.attributes.cha} (
             {formatBonus(getModifier(character.attributes.cha))})
+          </span>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm">
+          <span className="font-weight-bold">Bonus XP</span>
+          <span className="ml-2">
+            {character.charClass.bonusXP(character.attributesArray)}
           </span>
         </div>
       </div>

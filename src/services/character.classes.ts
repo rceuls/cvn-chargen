@@ -23,7 +23,17 @@ export interface ICharacterClass {
   suffix?: string;
   equipment: IEquipmentPack;
   image: string;
+  bonusXP: (attributes: number[]) => string;
 }
+
+export const calculateBaseBonusXP = (attrVal: number) => {
+  if (attrVal <= 5) return '-20%';
+  if (attrVal <= 8) return '-10%';
+  if (attrVal <= 12) return '0%';
+  if (attrVal <= 15) return '+5%';
+  if (attrVal <= 18) return '+10%';
+  return '0%';
+};
 
 enum CharacterAttributes {
   STR,
@@ -43,6 +53,8 @@ const cleric: ICharacterClass = {
   suffix: `You worship ${getRndValue(gods)}.`,
   equipment: getRndValue(clericPacks),
   image: getRndValue(imagesHuman),
+  bonusXP: (attr: number[]) =>
+    calculateBaseBonusXP(attr[+CharacterAttributes.WIS]),
 };
 
 const dwarf: ICharacterClass = {
@@ -58,6 +70,8 @@ const dwarf: ICharacterClass = {
   ],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesDwarves),
+  bonusXP: (attr: number[]) =>
+    calculateBaseBonusXP(attr[+CharacterAttributes.DEX]),
 };
 
 const elf: ICharacterClass = {
@@ -74,6 +88,21 @@ const elf: ICharacterClass = {
   ],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesElf),
+  bonusXP: (attr: number[]) => {
+    if (
+      attr[+CharacterAttributes.INT] >= 16 &&
+      attr[+CharacterAttributes.STR] >= 13
+    ) {
+      return '+10%';
+    }
+    if (
+      attr[+CharacterAttributes.INT] >= 13 &&
+      attr[+CharacterAttributes.STR] >= 13
+    ) {
+      return '+5%';
+    }
+    return '+0%';
+  },
 };
 
 const fighter: ICharacterClass = {
@@ -84,6 +113,8 @@ const fighter: ICharacterClass = {
   abilities: [],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesHuman),
+  bonusXP: (attr: number[]) =>
+    calculateBaseBonusXP(attr[+CharacterAttributes.STR]),
 };
 
 const halfling: ICharacterClass = {
@@ -99,6 +130,21 @@ const halfling: ICharacterClass = {
   ],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesHalflings),
+  bonusXP: (attr: number[]) => {
+    if (
+      attr[+CharacterAttributes.DEX] >= 13 &&
+      attr[+CharacterAttributes.STR] >= 13
+    ) {
+      return '+10%';
+    }
+    if (
+      attr[+CharacterAttributes.DEX] >= 13 ||
+      attr[+CharacterAttributes.STR] >= 13
+    ) {
+      return '+5%';
+    }
+    return '+0%';
+  },
 };
 
 const magicUser: ICharacterClass = {
@@ -109,6 +155,8 @@ const magicUser: ICharacterClass = {
   abilities: ['Arcane Magic (unarmoured only)'],
   equipment: getRndValue(magicUserPacks),
   image: getRndValue(imagesHuman),
+  bonusXP: (attr: number[]) =>
+    calculateBaseBonusXP(attr[+CharacterAttributes.INT]),
 };
 
 const thief: ICharacterClass = {
@@ -122,6 +170,8 @@ const thief: ICharacterClass = {
   ],
   equipment: getRndValue(thiefPacks),
   image: getRndValue(imagesHuman),
+  bonusXP: (attr: number[]) =>
+    calculateBaseBonusXP(attr[+CharacterAttributes.DEX]),
 };
 
 export const getClass = (attributes: number[]) => {
