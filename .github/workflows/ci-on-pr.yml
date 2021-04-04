@@ -1,4 +1,4 @@
-name: CI and CD
+name: CI and CD on PR
 on: [push, pull_request]
 
 jobs:
