@@ -39,7 +39,7 @@ export const vampiresImages = Array.from(Array(5).keys()).map(
 );
 
 export const zombiesImages = Array.from(Array(6).keys()).map(
-  (x) => `TCP Vampire ${x + 2}.jpg`
+  (x) => `TCP Zombie ${x + 2}.jpg`
 );
 
 export const imagesHuman = [
