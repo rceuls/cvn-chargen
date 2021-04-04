@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      You are 
+      Jos
+       the
+       
+      <a
+        href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Moo"
+        rel="noreferrer"
+        target="_blank"
+      >
+        test class
+      </a>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      ayy
+    </div>
+  </div>,
+  <hr />,
+]
+`;

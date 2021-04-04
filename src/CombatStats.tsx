@@ -2,7 +2,15 @@ import { CharacterAttributes } from './services/character.classes';
 import { ICharacter } from './services/character.generator';
 import { formatBonus, getModifier } from './services/util';
 
-const CombatStats = ({ character }: { character: ICharacter }) => {
+const CombatStats = ({
+  character,
+}: {
+  character: {
+    attributeScores: number[];
+    armorClass: number;
+    maximumHP: number;
+  };
+}) => {
   return (
     <>
       <div className="row">

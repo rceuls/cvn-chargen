@@ -1,7 +1,14 @@
-import { ICharacter } from './services/character.generator';
+import { ICharacterClass } from './services/character.classes';
 import { getSRDLink } from './services/util';
 
-const Personalia = ({ character }: { character: ICharacter }) => {
+const Personalia = ({
+  character,
+}: {
+  character: {
+    charClass: { url: string; name: string; suffix?: string };
+    name: string;
+  };
+}) => {
   return (
     <>
       <div className="row">
