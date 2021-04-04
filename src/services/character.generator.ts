@@ -1,11 +1,17 @@
-import { getClass, ICharacterClass } from './character.classes';
+import {
+  CharacterAttributes,
+  getClass,
+  ICharacterClass,
+} from './character.classes';
 import { names } from './names';
-import { getRndInteger, getRndValue } from './util';
+import { getModifier, getRndInteger, getRndValue } from './util';
 
 export interface ICharacter {
+  armorClass: number;
   name: string;
   charClass: ICharacterClass;
   attributeScores: number[];
+  maximumHP: number;
 }
 
 const getAttribute = () => {
@@ -25,11 +31,18 @@ export const generateCharacter = () => {
     attributes = getAttributes();
     selectedClass = getClass(attributes);
   }
-
+  const hp =
+    getRndInteger(3, selectedClass.startingHP) +
+    getModifier(attributes[+CharacterAttributes.CON]);
   const genChar: ICharacter = {
     name: getRndValue(names),
     charClass: selectedClass,
     attributeScores: attributes,
+    maximumHP: hp > 0 ? hp : 1,
+    armorClass:
+      10 +
+      selectedClass.equipment.acMod +
+      getModifier(attributes[+CharacterAttributes.DEX]),
   };
   return genChar;
 };

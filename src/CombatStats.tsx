@@ -1,12 +1,8 @@
 import { CharacterAttributes } from './services/character.classes';
 import { ICharacter } from './services/character.generator';
-import { formatBonus, getModifier, getRndInteger } from './services/util';
+import { formatBonus, getModifier } from './services/util';
 
 const CombatStats = ({ character }: { character: ICharacter }) => {
-  const hp =
-    getRndInteger(3, character.charClass.startingHP) +
-    getModifier(character.attributeScores[+CharacterAttributes.CON]);
-
   return (
     <>
       <div className="row">
@@ -31,13 +27,9 @@ const CombatStats = ({ character }: { character: ICharacter }) => {
       <div className="row">
         <div className="col-sm">
           <span className="font-weight-bold">Armor Class</span>
-          <span className="ml-2">
-            {10 +
-              character.charClass.equipment.acMod +
-              getModifier(character.attributeScores[+CharacterAttributes.DEX])}
-          </span>
+          <span className="ml-2">{character.armorClass}</span>
           <span className="ml-2 font-weight-bold">Maximum Hit Points</span>
-          <span className="ml-2">{hp > 0 ? hp : 1}</span>
+          <span className="ml-2">{character.maximumHP}</span>
         </div>
       </div>
 
