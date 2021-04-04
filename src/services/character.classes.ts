@@ -82,7 +82,7 @@ const elf: ICharacterClass = {
   savingThrows: [12, 13, 13, 15, 15],
   url: 'Elf',
   abilities: [
-    'Arcane Magic (unarmoured only, 1 level 1 spell/day)',
+    'Arcane Magic (unarmoured only, one level one spell/day)',
     'Detect secret doors (2-in-6)',
     'Immune to ghoul paralysis',
     "Infravision (60')",
@@ -155,7 +155,7 @@ const magicUser: ICharacterClass = {
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
   url: 'Magic-User',
-  abilities: ['Arcane Magic (unarmoured only, 1 level 1 spell/day)'],
+  abilities: ['Arcane Magic (unarmoured only, one level one spell/day)'],
   equipment: getRndValue(magicUserPacks),
   spells: [getRndValue(spells), spellReadMagic],
   image: getRndValue(imagesHuman),
