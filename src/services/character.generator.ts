@@ -4,14 +4,6 @@ import { getRndInteger } from './util';
 export interface ICharacter {
   charClass: ICharacterClass;
   attributesArray: number[];
-  attributes: {
-    str: number;
-    dex: number;
-    con: number;
-    int: number;
-    wis: number;
-    cha: number;
-  };
 }
 
 const getAttribute = () => {
@@ -36,14 +28,6 @@ export const generateCharacter = () => {
   const genChar: ICharacter = {
     charClass: selectedClass,
     attributesArray: attributes,
-    attributes: {
-      str: attributes[0],
-      dex: attributes[1],
-      con: attributes[2],
-      int: attributes[3],
-      wis: attributes[4],
-      cha: attributes[5],
-    },
   };
   return genChar;
 };

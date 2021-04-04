@@ -21,7 +21,7 @@ export const humansImages = Array.from(Array(8).keys()).map(
 export const scientistsImages = ['TCP Mad Scientist 2.jpg'];
 
 export const piratesImages = Array.from(Array(7).keys()).map(
-  (x) => `TCP Pirate ${x}.jpg`
+  (x) => `TCP Pirate ${x + 1}.jpg`
 );
 
 export const scaryImages = Array.from(Array(3).keys()).map(

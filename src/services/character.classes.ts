@@ -35,7 +35,7 @@ export const calculateBaseBonusXP = (attrVal: number) => {
   return '0%';
 };
 
-enum CharacterAttributes {
+export enum CharacterAttributes {
   STR,
   DEX,
   CON,
