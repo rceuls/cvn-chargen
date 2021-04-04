@@ -1,4 +1,3 @@
-import { ICharacterClass } from './services/character.classes';
 import { getSRDLink } from './services/util';
 
 const Personalia = ({
