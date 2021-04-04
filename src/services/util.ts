@@ -28,3 +28,11 @@ export const chunkArray = <T>(arr: T[], n: number) => {
 
 export const formatBonus = (bonus: number) =>
   bonus > 0 ? `+${bonus}` : `${bonus}`;
+
+export interface ILinkedItem {
+  label: string;
+  link: string;
+}
+
+export const getSRDLink = (suffix: string) =>
+  `https://oldschoolessentials.necroticgnome.com/srd/index.php/${suffix}`;

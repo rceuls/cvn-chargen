@@ -10,7 +10,6 @@ const getAttribute = () => {
   const sorted = Array.from(Array(4).keys())
     .map((x) => getRndInteger(1, 6))
     .sort();
-  console.log(sorted);
   return sorted.slice(1).reduce((prev, curr) => curr + prev);
 };
 

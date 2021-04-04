@@ -39,6 +39,7 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
           </span>
         </div>
       </div>
+      <hr />
     </>
   );
 };

@@ -40,6 +40,8 @@ const CombatStats = ({ character }: { character: ICharacter }) => {
           <span className="ml-2">{hp > 0 ? hp : 1}</span>
         </div>
       </div>
+
+      <hr />
     </>
   );
 };

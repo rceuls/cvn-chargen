@@ -33,6 +33,8 @@ const SavingThrows = ({ character }: { character: ICharacter }) => {
           <span className="ml-2">{character.charClass.savingThrows[4]}</span>
         </div>
       </div>
+
+      <hr />
     </>
   );
 };
