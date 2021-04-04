@@ -1,5 +1,5 @@
 import { spells } from './spells';
-import { getRndInteger, getRndValue } from './util';
+import { getRndInteger } from './util';
 
 export interface IEquipmentPack {
   equipment: string[];
@@ -50,24 +50,15 @@ export const fighterPacks: IEquipmentPack[] = [
 
 export const elfPacks: IEquipmentPack[] = [
   {
-    equipment: [
-      `Spellbook with read magic, ${getRndValue(spells)}`,
-      ...fighterPacks[0].equipment,
-    ],
+    equipment: [`Spellbook`, ...fighterPacks[0].equipment],
     acMod: +5,
   },
   {
-    equipment: [
-      `Spellbook with read magic, ${getRndValue(spells)}`,
-      ...fighterPacks[1].equipment,
-    ],
+    equipment: ['Spellbook', ...fighterPacks[1].equipment],
     acMod: +4,
   },
   {
-    equipment: [
-      `Spellbook with read magic, ${getRndValue(spells)}`,
-      ...fighterPacks[2].equipment,
-    ],
+    equipment: ['Spellbook', ...fighterPacks[2].equipment],
     acMod: +2,
   },
 ];
@@ -75,8 +66,8 @@ export const elfPacks: IEquipmentPack[] = [
 export const magicUserPacks: IEquipmentPack[] = [
   {
     equipment: [
-      `Spellbook with read magic, ${getRndValue(spells)}`,
-      `Scroll of ${spells[getRndInteger(0, spells.length - 1)]}`,
+      `Spellbook`,
+      `Scroll of ${spells[getRndInteger(0, spells.length - 1)].label}`,
       "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
       'Walking Staff  (1d4 + STR), slow, two handed) ',
       ...basePack,
@@ -85,7 +76,7 @@ export const magicUserPacks: IEquipmentPack[] = [
   },
   {
     equipment: [
-      `Spellbook with read magic, ${getRndValue(spells)}`,
+      'Spellbook',
       '50 GP',
       "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
       'Walking Staff (1d4 + STR, slow, two handed)',

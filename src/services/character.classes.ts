@@ -12,7 +12,8 @@ import {
   imagesHalflings,
   imagesHuman,
 } from './portraits';
-import { getRndValue } from './util';
+import { spellReadMagic, spells } from './spells';
+import { getRndValue, ILinkedItem } from './util';
 
 export interface ICharacterClass {
   name: string;
@@ -24,6 +25,7 @@ export interface ICharacterClass {
   equipment: IEquipmentPack;
   image: string;
   bonusXP: (attributes: number[]) => string;
+  spells?: ILinkedItem[];
 }
 
 export const calculateBaseBonusXP = (attrVal: number) => {
@@ -48,7 +50,7 @@ const cleric: ICharacterClass = {
   name: 'Cleric',
   startingHP: 6,
   savingThrows: [11, 12, 14, 16, 15],
-  url: '/Cleric',
+  url: 'Cleric',
   abilities: ['Turn Undead'],
   suffix: `You worship ${getRndValue(gods)}.`,
   equipment: getRndValue(clericPacks),
@@ -61,7 +63,7 @@ const dwarf: ICharacterClass = {
   name: 'Dwarf',
   startingHP: 8,
   savingThrows: [8, 9, 10, 13, 12],
-  url: '/Dwarf',
+  url: 'Dwarf',
   abilities: [
     'Detect construction tricks (2-in-6)',
     'Detect room traps (2-in-6)',
@@ -71,16 +73,16 @@ const dwarf: ICharacterClass = {
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesDwarves),
   bonusXP: (attr: number[]) =>
-    calculateBaseBonusXP(attr[+CharacterAttributes.DEX]),
+    calculateBaseBonusXP(attr[+CharacterAttributes.STR]),
 };
 
 const elf: ICharacterClass = {
   name: 'Elf',
   startingHP: 6,
   savingThrows: [12, 13, 13, 15, 15],
-  url: '/Elf',
+  url: 'Elf',
   abilities: [
-    'Arcane Magic (unarmoured only)',
+    'Arcane Magic (unarmoured only, one level one spell/day)',
     'Detect secret doors (2-in-6)',
     'Immune to ghoul paralysis',
     "Infravision (60')",
@@ -88,6 +90,7 @@ const elf: ICharacterClass = {
   ],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesElf),
+  spells: [getRndValue(spells)],
   bonusXP: (attr: number[]) => {
     if (
       attr[+CharacterAttributes.INT] >= 16 &&
@@ -109,7 +112,7 @@ const fighter: ICharacterClass = {
   name: 'Fighter',
   startingHP: 8,
   savingThrows: [12, 13, 14, 15, 16],
-  url: '/Fighter',
+  url: 'Fighter',
   abilities: [],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesHuman),
@@ -121,7 +124,7 @@ const halfling: ICharacterClass = {
   name: 'Halfling',
   startingHP: 6,
   savingThrows: [8, 9, 10, 13, 12],
-  url: '/Halfling',
+  url: 'Halfling',
   abilities: [
     'Defensive bonus (+2 AC when attacked by larger-than-human opponents)',
     'Hiding (90% in woods, 2-6 otherwise, must remain motionless)',
@@ -151,9 +154,10 @@ const magicUser: ICharacterClass = {
   name: 'Magic-User',
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
-  url: '/Magic-User',
-  abilities: ['Arcane Magic (unarmoured only)'],
+  url: 'Magic-User',
+  abilities: ['Arcane Magic (unarmoured only, one level one spell/day)'],
   equipment: getRndValue(magicUserPacks),
+  spells: [getRndValue(spells), spellReadMagic],
   image: getRndValue(imagesHuman),
   bonusXP: (attr: number[]) =>
     calculateBaseBonusXP(attr[+CharacterAttributes.INT]),
@@ -163,7 +167,7 @@ const thief: ICharacterClass = {
   name: 'Thief',
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
-  url: '/Thief',
+  url: 'Thief',
   abilities: [
     'Thief skills',
     'Backstab (+4 to hit and double damage when attacking an unaware opponent from behind)',

@@ -2,9 +2,10 @@ import AttributesOverview from './AttributesOverview';
 import { generateCharacter } from './services/character.generator';
 import CombatStats from './CombatStats';
 import SavingThrows from './SavingThrows';
-import { getRndValue } from './services/util';
+import { getRndValue, getSRDLink } from './services/util';
 import { names } from './services/names';
 import GenericArrayOverview from './GenericArrayOverview';
+import SpellsOverview from './SpellsOverview';
 
 const Chargen = () => {
   const genChar = generateCharacter();
@@ -14,10 +15,7 @@ const Chargen = () => {
         <div className="col-sm">
           You are {getRndValue(names)} the{' '}
           <a
-            href={
-              'https://oldschoolessentials.necroticgnome.com/srd/index.php' +
-              genChar.charClass.url
-            }
+            href={getSRDLink(genChar.charClass.url)}
             target="_blank"
             rel="noreferrer"
           >
@@ -33,16 +31,14 @@ const Chargen = () => {
         <></>
       )}
       <hr />
+
       <AttributesOverview character={genChar} />
-      <hr />
       <SavingThrows character={genChar} />
-      <hr />
       <CombatStats character={genChar} />
-      <hr />
       <GenericArrayOverview data={genChar.charClass.abilities} />
-      <hr />
+      <SpellsOverview data={genChar.charClass.spells ?? []} />
       <GenericArrayOverview data={genChar.charClass.equipment.equipment} />
-      <hr />
+
       <div className="row">
         <div className="col-sm">
           <img
