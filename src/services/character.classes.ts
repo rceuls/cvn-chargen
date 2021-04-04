@@ -82,7 +82,7 @@ const elf: ICharacterClass = {
   savingThrows: [12, 13, 13, 15, 15],
   url: 'Elf',
   abilities: [
-    'Arcane Magic (unarmoured only)',
+    'Arcane Magic (unarmoured only, 1 level 1 spell/day)',
     'Detect secret doors (2-in-6)',
     'Immune to ghoul paralysis',
     "Infravision (60')",
@@ -90,7 +90,7 @@ const elf: ICharacterClass = {
   ],
   equipment: getRndValue(fighterPacks),
   image: getRndValue(imagesElf),
-  spells: [getRndValue(spells), spellReadMagic],
+  spells: [getRndValue(spells)],
   bonusXP: (attr: number[]) => {
     if (
       attr[+CharacterAttributes.INT] >= 16 &&
@@ -155,8 +155,9 @@ const magicUser: ICharacterClass = {
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
   url: 'Magic-User',
-  abilities: ['Arcane Magic (unarmoured only)'],
+  abilities: ['Arcane Magic (unarmoured only, 1 level 1 spell/day)'],
   equipment: getRndValue(magicUserPacks),
+  spells: [getRndValue(spells), spellReadMagic],
   image: getRndValue(imagesHuman),
   bonusXP: (attr: number[]) =>
     calculateBaseBonusXP(attr[+CharacterAttributes.INT]),

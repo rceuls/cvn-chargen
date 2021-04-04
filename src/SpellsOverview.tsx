@@ -1,7 +1,7 @@
 import { getSRDLink, ILinkedItem } from './services/util';
 
 const SpellsOverview = ({ data }: { data: ILinkedItem[] }) => {
-  if (data) {
+  if (data.length) {
     return (
       <>
         {data.map((eq) => (

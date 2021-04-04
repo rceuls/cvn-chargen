@@ -31,12 +31,14 @@ const Chargen = () => {
         <></>
       )}
       <hr />
+
       <AttributesOverview character={genChar} />
       <SavingThrows character={genChar} />
       <CombatStats character={genChar} />
       <GenericArrayOverview data={genChar.charClass.abilities} />
       <SpellsOverview data={genChar.charClass.spells ?? []} />
       <GenericArrayOverview data={genChar.charClass.equipment.equipment} />
+
       <div className="row">
         <div className="col-sm">
           <img

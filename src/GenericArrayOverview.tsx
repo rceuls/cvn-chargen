@@ -1,7 +1,7 @@
 import { chunkArray } from './services/util';
 
 const GenericArrayOverview = ({ data }: { data: string[] }) => {
-  if (data) {
+  if (data.length) {
     const chonked = chunkArray(
       data.length > 2 ? data : ['', '', ...data],
       2
