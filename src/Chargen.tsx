@@ -1,5 +1,5 @@
 import AttributesOverview from './AttributesOverview';
-import { generateCharacter } from './services/character.generator';
+import { ICharacter } from './services/character.generator';
 import CombatStats from './CombatStats';
 import SavingThrows from './SavingThrows';
 import GenericArrayOverview from './GenericArrayOverview';
@@ -7,8 +7,7 @@ import SpellsOverview from './SpellsOverview';
 import Personalia from './Personalia';
 import ExtraPersonalia from './ExtraPersonalia';
 
-const Chargen = () => {
-  const genChar = generateCharacter();
+const Chargen = ({ genChar }: { genChar: ICharacter }) => {
   return (
     <>
       <Personalia character={genChar} />

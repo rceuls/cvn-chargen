@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Base Attack Bonus (melee, ranged)
+      </span>
+      <span
+        className="ml-2"
+      >
+        +0 (
+        -1
+        ,
+        +3
+        )
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Armor Class
+      </span>
+      <span
+        className="ml-2"
+      >
+        12
+      </span>
+      <span
+        className="ml-2 font-weight-bold"
+      >
+        Maximum Hit Points
+      </span>
+      <span
+        className="ml-2"
+      >
+        13
+      </span>
+    </div>
+  </div>,
+  <hr />,
+]
+`;
