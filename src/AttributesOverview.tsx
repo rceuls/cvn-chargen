@@ -21,7 +21,7 @@ const AttributesOverview = ({ character }: { character: ICharacter }) => {
             {character.attributes.con} (
             {formatBonus(getModifier(character.attributes.con))})
           </span>
-          <span className="font-weight-bold">INT</span>
+          <span className="ml-2 font-weight-bold">INT</span>
           <span className="ml-2">
             {character.attributes.int} (
             {formatBonus(getModifier(character.attributes.int))})
