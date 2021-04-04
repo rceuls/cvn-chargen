@@ -3,6 +3,7 @@ import { getRndInteger } from './util';
 
 export interface ICharacter {
   charClass: ICharacterClass;
+  attributesArray: number[];
   attributes: {
     str: number;
     dex: number;
@@ -34,6 +35,7 @@ export const generateCharacter = () => {
 
   const genChar: ICharacter = {
     charClass: selectedClass,
+    attributesArray: attributes,
     attributes: {
       str: attributes[0],
       dex: attributes[1],
