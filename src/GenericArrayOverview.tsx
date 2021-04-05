@@ -9,7 +9,7 @@ const GenericArrayOverview = ({ data }: { data: string[] }) => {
     return (
       <>
         {chonked[0].map((eq, ix) => (
-          <div className="row">
+          <div className="row" key={ix}>
             <div className="col-sm">{eq}</div>
             {chonked[1].length !== ix ? (
               <div className="col-sm">{chonked[1][ix]}</div>

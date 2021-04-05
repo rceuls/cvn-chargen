@@ -1,3 +1,4 @@
+import React from 'react';
 import { CharacterAttributes } from './services/character.classes';
 import { formatBonus, getModifier } from './services/util';
 
@@ -21,16 +22,16 @@ const AttributesOverview = ({
     <>
       <div className="row">
         <div className="col-sm">
-          {attributeOrder.map((a: CharacterAttributes) => {
+          {attributeOrder.map((a: CharacterAttributes, ix: number) => {
             return (
-              <>
+              <React.Fragment key={`ca${ix}`}>
                 <span className="font-weight-bold">
                   {CharacterAttributes[a]}
                 </span>
                 <span className="ml-2 mr-2">
                   {attributes[+a]} ({formatBonus(getModifier(attributes[+a]))})
                 </span>
-              </>
+              </React.Fragment>
             );
           })}
         </div>
