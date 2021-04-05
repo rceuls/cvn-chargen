@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      You are 
+      Tamrin
+       the
+       
+      <a
+        href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Halfling"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Halfling
+      </a>
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        STR
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        8
+         (
+        -1
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        DEX
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        16
+         (
+        +2
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        CON
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        10
+         (
+        0
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        INT
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        13
+         (
+        +1
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        WIS
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        13
+         (
+        +1
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        CHA
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        13
+         (
+        +1
+        )
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Bonus XP
+      </span>
+      <span
+        className="ml-2"
+      >
+        +10%
+      </span>
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Death Ray or Poison
+      </span>
+      <span
+        className="ml-2"
+      >
+        8
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Magical Wands
+      </span>
+      <span
+        className="ml-2"
+      >
+        9
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Paralysis or Petrification
+      </span>
+      <span
+        className="ml-2"
+      >
+        10
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Dragon Breath
+      </span>
+      <span
+        className="ml-2"
+      >
+        13
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Rods, Staves, Spells
+      </span>
+      <span
+        className="ml-2"
+      >
+        12
+      </span>
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Base Attack Bonus (melee, ranged)
+      </span>
+      <span
+        className="ml-2"
+      >
+        +0 (
+        -1
+        ,
+        +2
+        )
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Armor Class
+      </span>
+      <span
+        className="ml-2"
+      >
+        16
+      </span>
+      <span
+        className="ml-2 font-weight-bold"
+      >
+        Maximum Hit Points
+      </span>
+      <span
+        className="ml-2"
+      >
+        5
+      </span>
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Listen at doors (2-in-6)
+    </div>
+    <div
+      className="col-sm"
+    >
+      Defensive bonus (+2 AC when attacked by larger-than-human opponents)
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Missile attack bonus (+1)
+    </div>
+    <div
+      className="col-sm"
+    >
+      Hiding (90% in woods, 2-6 otherwise, must remain motionless)
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Wineskin/Waterskin
+    </div>
+    <div
+      className="col-sm"
+    >
+      Chain Mail (AC 14)
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Winter Blanket
+    </div>
+    <div
+      className="col-sm"
+    >
+      Polearm (1d10 + STR, two handed, brace, slow)
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Rations, Dry, one week
+    </div>
+    <div
+      className="col-sm"
+    >
+      Backpack
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Sack, Large
+    </div>
+    <div
+      className="col-sm"
+    >
+      Torches (6)
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      Sacks, small (2)
+    </div>
+    <div
+      className="col-sm"
+    >
+      Tinderbox, flint and steel
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      60 gold pieces
+    </div>
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <img
+        alt="your portrait"
+        className="img-thumbnail"
+        src="/portraits/TCP Human 1.jpg"
+        style={
+          Object {
+            "aspectRatio": "auto",
+            "maxHeight": 200,
+            "maxWidth": 200,
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;

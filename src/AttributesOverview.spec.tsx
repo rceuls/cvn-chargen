@@ -1,6 +1,5 @@
 import renderer from 'react-test-renderer';
 import AttributesOverview from './AttributesOverview';
-import GenericArrayOverview from './GenericArrayOverview';
 
 it('renders correctly', () => {
   const tree = renderer
