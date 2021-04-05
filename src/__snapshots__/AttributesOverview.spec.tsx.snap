@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        STR
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        10
+         (
+        0
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        DEX
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        11
+         (
+        0
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        CON
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        12
+         (
+        0
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        INT
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        13
+         (
+        +1
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        WIS
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        14
+         (
+        +1
+        )
+      </span>
+      <span
+        className="font-weight-bold"
+      >
+        CHA
+      </span>
+      <span
+        className="ml-2 mr-2"
+      >
+        15
+         (
+        +1
+        )
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Bonus XP
+      </span>
+      <span
+        className="ml-2"
+      >
+        no
+      </span>
+    </div>
+  </div>,
+  <hr />,
+]
+`;

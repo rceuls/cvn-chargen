@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm"
+    >
+      <a
+        href="https://oldschoolessentials.necroticgnome.com/srd/index.php/Read_Magic"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Read Magic
+      </a>
+    </div>
+  </div>,
+  <hr />,
+]
+`;

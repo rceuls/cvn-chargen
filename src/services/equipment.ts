@@ -93,7 +93,7 @@ export const clericPacks: IEquipmentPack[] = [
       'Shield (AC +1)',
       'Holy Symbol',
       'Vial of holy water',
-      'Mace (1d6)',
+      'Mace (1d6 + STR)',
       ...basePack,
     ],
     acMod: +3,
@@ -101,11 +101,11 @@ export const clericPacks: IEquipmentPack[] = [
   {
     equipment: [
       'Leather armor (AC 12)',
-      "Sling (1d4 + STR, 5'-40' (+1 to hit)/41'-80'/81'-160' (-1 to hit))",
+      "Sling (1d4, 5'-40' (+1 to hit)/41'-80'/81'-160' (-1 to hit))",
       '30 sling bullets in pouch',
       'Holy Symbol',
       'Vial of holy water',
-      'Mace (1d6)',
+      'Mace (1d6 + STR)',
       ...basePack,
     ],
     acMod: +2,
@@ -117,7 +117,7 @@ export const thiefPacks: IEquipmentPack[] = [
     equipment: [
       'Leather armor (AC 12)',
       "Thieves' tools",
-      'Shortsword (1d6)',
+      'Shortsword (1d6 + STR)',
       "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
       "Silken Rope, 50'",
       ...basePack,
