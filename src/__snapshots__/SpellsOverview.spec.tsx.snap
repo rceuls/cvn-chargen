@@ -20,3 +20,5 @@ Array [
   <hr />,
 ]
 `;
+
+exports[`renders correctly when empty 1`] = `null`;
