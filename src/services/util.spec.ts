@@ -25,4 +25,6 @@ it('getModifier works', () => {
   expect(getModifier(16)).toBe(2);
   expect(getModifier(17)).toBe(2);
   expect(getModifier(18)).toBe(3);
+  // unknown => default to zero.
+  expect(getModifier(19)).toBe(0);
 });

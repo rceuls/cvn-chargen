@@ -46,7 +46,7 @@ export enum CharacterAttributes {
   CHA,
 }
 
-const cleric: ICharacterClass = {
+export const cleric: ICharacterClass = {
   name: 'Cleric',
   startingHP: 6,
   savingThrows: [11, 12, 14, 16, 15],
@@ -59,7 +59,7 @@ const cleric: ICharacterClass = {
     calculateBaseBonusXP(attr[+CharacterAttributes.WIS]),
 };
 
-const dwarf: ICharacterClass = {
+export const dwarf: ICharacterClass = {
   name: 'Dwarf',
   startingHP: 8,
   savingThrows: [8, 9, 10, 13, 12],
@@ -76,7 +76,7 @@ const dwarf: ICharacterClass = {
     calculateBaseBonusXP(attr[+CharacterAttributes.STR]),
 };
 
-const elf: ICharacterClass = {
+export const elf: ICharacterClass = {
   name: 'Elf',
   startingHP: 6,
   savingThrows: [12, 13, 13, 15, 15],
@@ -108,7 +108,7 @@ const elf: ICharacterClass = {
   },
 };
 
-const fighter: ICharacterClass = {
+export const fighter: ICharacterClass = {
   name: 'Fighter',
   startingHP: 8,
   savingThrows: [12, 13, 14, 15, 16],
@@ -120,7 +120,7 @@ const fighter: ICharacterClass = {
     calculateBaseBonusXP(attr[+CharacterAttributes.STR]),
 };
 
-const halfling: ICharacterClass = {
+export const halfling: ICharacterClass = {
   name: 'Halfling',
   startingHP: 6,
   savingThrows: [8, 9, 10, 13, 12],
@@ -150,7 +150,7 @@ const halfling: ICharacterClass = {
   },
 };
 
-const magicUser: ICharacterClass = {
+export const magicUser: ICharacterClass = {
   name: 'Magic-User',
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
@@ -163,7 +163,7 @@ const magicUser: ICharacterClass = {
     calculateBaseBonusXP(attr[+CharacterAttributes.INT]),
 };
 
-const thief: ICharacterClass = {
+export const thief: ICharacterClass = {
   name: 'Thief',
   startingHP: 4,
   savingThrows: [13, 14, 13, 16, 15],
@@ -180,37 +180,38 @@ const thief: ICharacterClass = {
 
 export const getClass = (attributes: number[]) => {
   const max = Math.max(...attributes);
-  let avClasses: ICharacterClass[] = [fighter];
+  const avClasses: ICharacterClass[] = [];
   if (max === attributes[+CharacterAttributes.STR]) {
+    avClasses.push(fighter);
     if (attributes[+CharacterAttributes.CON] > 9) {
-      avClasses = [...avClasses, dwarf];
+      avClasses.push(dwarf);
     }
     if (attributes[+CharacterAttributes.INT] > 9) {
-      avClasses = [...avClasses, elf];
+      avClasses.push(elf);
     }
   }
   if (max === attributes[+CharacterAttributes.DEX]) {
-    avClasses = [...avClasses, thief];
+    avClasses.push(thief);
     if (attributes[+CharacterAttributes.CON] > 9) {
-      avClasses = [...avClasses, halfling];
+      avClasses.push(halfling);
     }
   }
   if (max === attributes[+CharacterAttributes.CON]) {
     if (attributes[+CharacterAttributes.STR] > 9) {
-      avClasses = [...avClasses, dwarf];
+      avClasses.push(dwarf);
     }
     if (attributes[+CharacterAttributes.DEX] > 9) {
-      avClasses = [...avClasses, halfling];
+      avClasses.push(halfling);
     }
   }
   if (max === attributes[+CharacterAttributes.INT]) {
-    avClasses = [magicUser];
+    avClasses.push(magicUser);
     if (attributes[+CharacterAttributes.STR] > 9) {
-      avClasses = [...avClasses, elf];
+      avClasses.push(elf);
     }
   }
   if (max === attributes[+CharacterAttributes.WIS]) {
-    avClasses = [cleric];
+    avClasses.push(cleric);
   }
-  return getRndValue(avClasses);
+  return avClasses;
 };

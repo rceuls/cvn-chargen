@@ -29,7 +29,7 @@ export const generateCharacter = () => {
   let attributes: number[] = [];
   while (!selectedClass) {
     attributes = getAttributes();
-    selectedClass = getClass(attributes);
+    selectedClass = getRndValue(getClass(attributes));
   }
   const hp =
     getRndInteger(3, selectedClass.startingHP) +
