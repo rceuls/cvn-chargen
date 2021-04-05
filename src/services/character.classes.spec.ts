@@ -29,6 +29,8 @@ it('bonusXP calculationworks', () => {
   expect(calculateBaseBonusXP(16)).toBe('+10%');
   expect(calculateBaseBonusXP(17)).toBe('+10%');
   expect(calculateBaseBonusXP(18)).toBe('+10%');
+  expect(calculateBaseBonusXP(0)).toBe('-20%');
+  expect(calculateBaseBonusXP(19)).toBe('0%');
 });
 
 it('Get str classes', () => {
@@ -51,4 +53,50 @@ it('Get int classes', () => {
 });
 it('Get wis classes', () => {
   expect(getClass([10, 10, 10, 10, 12, 10])).toEqual([cleric]);
+});
+it('Get elf bonus xp', () => {
+  expect(elf.bonusXP([13, 10, 10, 16, 12, 10])).toEqual('+10%');
+  expect(elf.bonusXP([13, 10, 10, 13, 12, 10])).toEqual('+5%');
+  expect(elf.bonusXP([13, 10, 10, 10, 12, 10])).toEqual('+0%');
+});
+it('Get halfling bonus xp', () => {
+  expect(halfling.bonusXP([14, 14, 10, 16, 12, 10])).toEqual('+10%');
+  expect(halfling.bonusXP([12, 14, 10, 13, 12, 10])).toEqual('+5%');
+  expect(halfling.bonusXP([14, 12, 10, 10, 12, 10])).toEqual('+5%');
+  expect(halfling.bonusXP([10, 10, 10, 10, 12, 10])).toEqual('+0%');
+});
+it('Get dwarf bonus xp', () => {
+  Array.from(Array(18).keys()).forEach((a) => {
+    expect(dwarf.bonusXP([a, 10, 10, 10, 10, 10])).toEqual(
+      calculateBaseBonusXP(a)
+    );
+  });
+});
+it('Get fighter bonus xp', () => {
+  Array.from(Array(18).keys()).forEach((a) => {
+    expect(fighter.bonusXP([a, 10, 10, 10, 10, 10])).toEqual(
+      calculateBaseBonusXP(a)
+    );
+  });
+});
+it('Get thief bonus xp', () => {
+  Array.from(Array(18).keys()).forEach((a) => {
+    expect(thief.bonusXP([10, a, 10, 10, 10, 10])).toEqual(
+      calculateBaseBonusXP(a)
+    );
+  });
+});
+it('Get cleric bonus xp', () => {
+  Array.from(Array(18).keys()).forEach((a) => {
+    expect(cleric.bonusXP([10, 10, 10, 10, a, 10])).toEqual(
+      calculateBaseBonusXP(a)
+    );
+  });
+});
+it('Get magic user bonus xp', () => {
+  Array.from(Array(18).keys()).forEach((a) => {
+    expect(magicUser.bonusXP([10, 10, 10, a, 10, 10])).toEqual(
+      calculateBaseBonusXP(a)
+    );
+  });
 });

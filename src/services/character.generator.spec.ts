@@ -1,4 +1,3 @@
-import { calculateBaseBonusXP } from './character.classes';
 import { generateCharacter } from './character.generator';
 import { names } from './names';
 
