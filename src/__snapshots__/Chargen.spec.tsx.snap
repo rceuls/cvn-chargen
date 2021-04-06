@@ -26,7 +26,7 @@ Array [
     className="row"
   >
     <div
-      className="col-sm"
+      className="col-sm-12"
     >
       <span
         className="font-weight-bold"
@@ -112,7 +112,7 @@ Array [
     className="row"
   >
     <div
-      className="col-sm"
+      className="col-sm-2"
     >
       <span
         className="font-weight-bold"
@@ -123,6 +123,98 @@ Array [
         className="ml-2"
       >
         +10%
+      </span>
+    </div>
+    <div
+      className="col-sm-2"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Open doors
+      </span>
+      <span
+        className="ml-2"
+      >
+        1-in-6
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-2"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Literacy
+      </span>
+      <span
+        className="ml-2"
+      >
+        Literate
+      </span>
+    </div>
+    <div
+      className="col-sm-10"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Languages
+      </span>
+      <span
+        className="ml-2"
+      >
+        Native + 1 additional
+      </span>
+    </div>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-2"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Max Retainers
+      </span>
+      <span
+        className="ml-2"
+      >
+        5
+      </span>
+    </div>
+    <div
+      className="col-sm-2"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Retainer Loyality
+      </span>
+      <span
+        className="ml-2"
+      >
+        8
+      </span>
+    </div>
+    <div
+      className="col-sm-8"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        NPC reactions
+      </span>
+      <span
+        className="ml-2"
+      >
+        +1
       </span>
     </div>
   </div>,
