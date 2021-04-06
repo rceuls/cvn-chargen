@@ -11,6 +11,24 @@ const ExtraPersonalia = ({ character }: { character: ICharacter }) => {
           alt="your portrait"
         />
       </div>
+      <div className="col-sm">
+        <div className="row">
+          <div className="col-sm">
+            Background: {character.traits.background}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm">Clothes: {character.traits.clothes}</div>
+        </div>
+        <div className="row">
+          <div className="col-sm">
+            Personality: {character.traits.personality}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm">Mannerisms: {character.traits.mannerism}</div>
+        </div>
+      </div>
     </div>
   );
 };
