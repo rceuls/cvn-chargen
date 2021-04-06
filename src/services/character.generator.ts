@@ -5,6 +5,7 @@ import {
 } from './character.classes';
 import { names } from './names';
 import { getModifier, getRndInteger, getRndValue } from './util';
+import { backgrounds, personalities, clothes, mannerisms } from './traits';
 
 export interface ICharacter {
   armorClass: number;
@@ -12,6 +13,12 @@ export interface ICharacter {
   charClass: ICharacterClass;
   attributeScores: number[];
   maximumHP: number;
+  traits: {
+    personality: string;
+    background: string;
+    clothes: string;
+    mannerism: string;
+  };
 }
 
 const getAttribute = () => {
@@ -39,6 +46,12 @@ export const generateCharacter = () => {
     charClass: selectedClass,
     attributeScores: attributes,
     maximumHP: hp > 0 ? hp : 1,
+    traits: {
+      background: getRndValue(backgrounds),
+      personality: getRndValue(personalities),
+      clothes: getRndValue(clothes),
+      mannerism: getRndValue(mannerisms),
+    },
     armorClass:
       10 +
       selectedClass.equipment.acMod +

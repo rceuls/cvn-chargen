@@ -122,7 +122,7 @@ Array [
       <span
         className="ml-2"
       >
-        +10%
+        my bonus xp
       </span>
     </div>
     <div
@@ -488,6 +488,50 @@ Array [
           }
         }
       />
+    </div>
+    <div
+      className="col-sm"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm"
+        >
+          Background: 
+          aaa
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm"
+        >
+          Clothes: 
+          bbb
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm"
+        >
+          Personality: 
+          ddd
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm"
+        >
+          Mannerisms: 
+          ccc
+        </div>
+      </div>
     </div>
   </div>,
 ]

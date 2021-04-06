@@ -12,3 +12,4 @@ OSE character generator. [Github Page](https://rceuls.github.io/cvn-chargen/).
 - Links a lot to OSE SRD @ <https://oldschoolessentials.necroticgnome.com/srd/index.php/Main_Page>
 - Website Icon by [Lorc, Delapouite & contributors](https://game-icons.net/) is licensed under [(CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
 - Character portraits by [Jeff Preston](http://team-preston.com/), licensed under [(CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- Character traits from Maze Rats - "Version 4.3" is released under a Creative Commons Attribution 4.0 International (CC BY 4.0) license - <https://creativecommons.org/licenses/by/4.0/deed.ast>
