@@ -153,11 +153,19 @@ const expectedData = [
     maxRetainers: '7',
     retainerLoyality: '10',
   },
+  {
+    spokenLanguages: 'none',
+    literacy: 'potato',
+    openDoors: '3-in-6',
+    npcReaction: 'none',
+    maxRetainers: 'potato',
+    retainerLoyality: 'none',
+  },
 ];
 
 it('extra info calculation works', () => {
   const data: unknown[] = [];
-  Array.from(Array(19).keys()).forEach((x) =>
+  Array.from(Array(20).keys()).forEach((x) =>
     data.push(getExtraAttributes([x, x, x, x, x, x]))
   );
   expect(data).toStrictEqual(expectedData);
