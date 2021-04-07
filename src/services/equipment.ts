@@ -68,7 +68,7 @@ export const magicUserPacks: IEquipmentPack[] = [
     equipment: [
       `Spellbook`,
       `Scroll of ${spells[getRndInteger(0, spells.length - 1)].label}`,
-      "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
+      "2 Daggers (1d4 + STR, 10' (+1 to hit)/20'/30' (-1 to hit))",
       'Walking Staff  (1d4 + STR), slow, two handed) ',
       ...basePack,
     ],
@@ -78,7 +78,7 @@ export const magicUserPacks: IEquipmentPack[] = [
     equipment: [
       'Spellbook',
       '50 GP',
-      "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
+      "2 Daggers (1d4 + STR, 10'(+1 to hit)/20'/30' (-1 to hit))",
       'Walking Staff (1d4 + STR, slow, two handed)',
       ...basePack,
     ],
@@ -101,7 +101,7 @@ export const clericPacks: IEquipmentPack[] = [
   {
     equipment: [
       'Leather armor (AC 12)',
-      "Sling (1d4, 5'-40' (+1 to hit)/41'-80'/81'-160' (-1 to hit))",
+      "Sling (1d4, 40'(+1 to hit)/80'/160' (-1 to hit))",
       '30 sling bullets in pouch',
       'Holy Symbol',
       'Vial of holy water',
@@ -118,7 +118,7 @@ export const thiefPacks: IEquipmentPack[] = [
       'Leather armor (AC 12)',
       "Thieves' tools",
       'Shortsword (1d6 + STR)',
-      "2 Daggers (1d4 + STR, 5'-10' (+1 to hit)/11'-20'/21'-30' (-1 to hit))",
+      "2 Daggers (1d4 + STR, 10'(+1 to hit)/20'/30' (-1 to hit))",
       "Silken Rope, 50'",
       ...basePack,
     ],
