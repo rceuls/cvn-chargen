@@ -24,7 +24,7 @@ export interface ICharacter {
 const getAttribute = () => {
   const sorted = Array.from(Array(4).keys())
     .map((x) => getRndInteger(1, 6))
-    .sort();
+    .sort((a, b) => a - b);
   return sorted.slice(1).reduce((prev, curr) => curr + prev);
 };
 
@@ -41,7 +41,7 @@ export const generateCharacter = () => {
   const hp =
     getRndInteger(3, selectedClass.startingHP) +
     getModifier(attributes[+CharacterAttributes.CON]);
-  const genChar: ICharacter = {
+  return {
     name: getRndValue(names),
     charClass: selectedClass,
     attributeScores: attributes,
@@ -57,5 +57,4 @@ export const generateCharacter = () => {
       selectedClass.equipment.acMod +
       getModifier(attributes[+CharacterAttributes.DEX]),
   };
-  return genChar;
 };

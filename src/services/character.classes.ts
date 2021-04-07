@@ -182,36 +182,55 @@ export const getClass = (attributes: number[]) => {
   const max = Math.max(...attributes);
   const avClasses: ICharacterClass[] = [];
   if (max === attributes[+CharacterAttributes.STR]) {
-    avClasses.push(fighter);
-    if (attributes[+CharacterAttributes.CON] > 9) {
-      avClasses.push(dwarf);
-    }
-    if (attributes[+CharacterAttributes.INT] > 9) {
-      avClasses.push(elf);
-    }
+    getStrengthClasses(avClasses, attributes);
   }
   if (max === attributes[+CharacterAttributes.DEX]) {
-    avClasses.push(thief);
-    if (attributes[+CharacterAttributes.CON] > 9) {
-      avClasses.push(halfling);
-    }
+    getDexClasses(avClasses, attributes);
   }
   if (max === attributes[+CharacterAttributes.CON]) {
-    if (attributes[+CharacterAttributes.STR] > 9) {
-      avClasses.push(dwarf);
-    }
-    if (attributes[+CharacterAttributes.DEX] > 9) {
-      avClasses.push(halfling);
-    }
+    getConClasses(attributes, avClasses);
   }
   if (max === attributes[+CharacterAttributes.INT]) {
-    avClasses.push(magicUser);
-    if (attributes[+CharacterAttributes.STR] > 9) {
-      avClasses.push(elf);
-    }
+    getIntClasses(avClasses, attributes);
   }
   if (max === attributes[+CharacterAttributes.WIS]) {
     avClasses.push(cleric);
   }
   return avClasses;
+};
+
+const getStrengthClasses = (
+  avClasses: ICharacterClass[],
+  attributes: number[]
+) => {
+  avClasses.push(fighter);
+  if (attributes[+CharacterAttributes.CON] > 9) {
+    avClasses.push(dwarf);
+  }
+  if (attributes[+CharacterAttributes.INT] > 9) {
+    avClasses.push(elf);
+  }
+};
+
+const getDexClasses = (avClasses: ICharacterClass[], attributes: number[]) => {
+  avClasses.push(thief);
+  if (attributes[+CharacterAttributes.CON] > 9) {
+    avClasses.push(halfling);
+  }
+};
+
+const getConClasses = (attributes: number[], avClasses: ICharacterClass[]) => {
+  if (attributes[+CharacterAttributes.STR] > 9) {
+    avClasses.push(dwarf);
+  }
+  if (attributes[+CharacterAttributes.DEX] > 9) {
+    avClasses.push(halfling);
+  }
+};
+
+const getIntClasses = (avClasses: ICharacterClass[], attributes: number[]) => {
+  avClasses.push(magicUser);
+  if (attributes[+CharacterAttributes.STR] > 9) {
+    avClasses.push(elf);
+  }
 };
