@@ -27,7 +27,7 @@ export const chunkArray = <T>(arr: T[], n: number) => {
 };
 
 export const formatBonus = (bonus: number) =>
-  bonus > 0 ? `+${bonus}` : `${bonus}`;
+  bonus >= 0 ? `+${bonus}` : `${bonus}`;
 
 export interface ILinkedItem {
   label: string;

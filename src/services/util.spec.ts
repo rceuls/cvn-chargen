@@ -3,7 +3,7 @@ import { formatBonus, getModifier } from './util';
 it('formatBonus works', () => {
   expect(formatBonus(1)).toBe('+1');
   expect(formatBonus(-1)).toBe('-1');
-  expect(formatBonus(0)).toBe('0');
+  expect(formatBonus(0)).toBe('+0');
 });
 
 it('getModifier works', () => {
