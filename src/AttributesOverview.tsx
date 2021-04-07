@@ -72,6 +72,12 @@ const AttributesOverview = ({
           <span className="ml-2">{extraInfo.npcReaction}</span>
         </div>
       </div>
+      <div className="row">
+        <div className="col-sm-2">
+          <span className="font-weight-bold">Magic Save</span>
+          <span className="ml-2">{attributes[+CharacterAttributes.WIS]}</span>
+        </div>
+      </div>
       <hr />
     </>
   );
