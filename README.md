@@ -2,6 +2,7 @@
 
 [![CI and CD](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml/badge.svg)](https://github.com/rceuls/cvn-chargen/actions/workflows/ci-wf.yml)
 [![codecov](https://codecov.io/gh/rceuls/cvn-chargen/branch/main/graph/badge.svg)](https://codecov.io/gh/rceuls/cvn-chargen)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rceuls_cvn-chargen&metric=alert_status)](https://sonarcloud.io/dashboard?id=rceuls_cvn-chargen)
 
 OSE character generator. [Github Page](https://rceuls.github.io/cvn-chargen/).
 
