@@ -75,7 +75,9 @@ const AttributesOverview = ({
       <div className="row">
         <div className="col-sm-2">
           <span className="font-weight-bold">Magic Save</span>
-          <span className="ml-2">{attributes[+CharacterAttributes.WIS]}</span>
+          <span className="ml-2">
+            {formatBonus(getModifier(attributes[+CharacterAttributes.WIS]))}
+          </span>
         </div>
       </div>
       <hr />
