@@ -180,57 +180,58 @@ export const thief: ICharacterClass = {
 
 export const getClass = (attributes: number[]) => {
   const max = Math.max(...attributes);
-  const avClasses: ICharacterClass[] = [];
   if (max === attributes[+CharacterAttributes.STR]) {
-    getStrengthClasses(avClasses, attributes);
+    return getStrengthClasses(attributes);
   }
   if (max === attributes[+CharacterAttributes.DEX]) {
-    getDexClasses(avClasses, attributes);
+    return getDexClasses(attributes);
   }
   if (max === attributes[+CharacterAttributes.CON]) {
-    getConClasses(attributes, avClasses);
+    return getConClasses(attributes);
   }
   if (max === attributes[+CharacterAttributes.INT]) {
-    getIntClasses(avClasses, attributes);
+    return getIntClasses(attributes);
   }
   if (max === attributes[+CharacterAttributes.WIS]) {
-    avClasses.push(cleric);
+    return [cleric];
   }
-  return avClasses;
+  return [];
 };
 
-const getStrengthClasses = (
-  avClasses: ICharacterClass[],
-  attributes: number[]
-) => {
-  avClasses.push(fighter);
+const getStrengthClasses = (attributes: number[]) => {
+  const avClasses: ICharacterClass[] = [fighter];
   if (attributes[+CharacterAttributes.CON] > 9) {
     avClasses.push(dwarf);
   }
   if (attributes[+CharacterAttributes.INT] > 9) {
     avClasses.push(elf);
   }
+  return avClasses;
 };
 
-const getDexClasses = (avClasses: ICharacterClass[], attributes: number[]) => {
-  avClasses.push(thief);
+const getDexClasses = (attributes: number[]) => {
+  const avClasses: ICharacterClass[] = [thief];
   if (attributes[+CharacterAttributes.CON] > 9) {
     avClasses.push(halfling);
   }
+  return avClasses;
 };
 
-const getConClasses = (attributes: number[], avClasses: ICharacterClass[]) => {
+const getConClasses = (attributes: number[]) => {
+  const avClasses: ICharacterClass[] = [];
   if (attributes[+CharacterAttributes.STR] > 9) {
     avClasses.push(dwarf);
   }
   if (attributes[+CharacterAttributes.DEX] > 9) {
     avClasses.push(halfling);
   }
+  return avClasses;
 };
 
-const getIntClasses = (avClasses: ICharacterClass[], attributes: number[]) => {
-  avClasses.push(magicUser);
+const getIntClasses = (attributes: number[]) => {
+  const avClasses: ICharacterClass[] = [magicUser];
   if (attributes[+CharacterAttributes.STR] > 9) {
     avClasses.push(elf);
   }
+  return avClasses;
 };
