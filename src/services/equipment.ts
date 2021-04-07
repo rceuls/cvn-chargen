@@ -40,7 +40,7 @@ export const fighterPacks: IEquipmentPack[] = [
     equipment: [
       'Leather Armor (AC 12)',
       'Longsword (1d8 + STR)',
-      "Shortbow (1d6, 5'-50' (+1 to hit)/51'-100'/101'-150' (-1 to hit))",
+      "Shortbow (1d6, 50' (+1 to hit)/100'/150' (-1 to hit))",
       'Quiver with 30 arrows',
       ...basePack,
     ],
