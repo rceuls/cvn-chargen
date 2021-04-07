@@ -17,9 +17,7 @@ Array [
         className="ml-2 mr-2"
       >
         10
-         (
-        0
-        )
+         
       </span>
       <span
         className="font-weight-bold"
@@ -30,9 +28,7 @@ Array [
         className="ml-2 mr-2"
       >
         11
-         (
-        0
-        )
+         
       </span>
       <span
         className="font-weight-bold"
@@ -43,9 +39,7 @@ Array [
         className="ml-2 mr-2"
       >
         12
-         (
-        0
-        )
+         
       </span>
       <span
         className="font-weight-bold"
@@ -56,9 +50,8 @@ Array [
         className="ml-2 mr-2"
       >
         13
-         (
-        +1
-        )
+         
+        (+1)
       </span>
       <span
         className="font-weight-bold"
@@ -69,9 +62,8 @@ Array [
         className="ml-2 mr-2"
       >
         14
-         (
-        +1
-        )
+         
+        (+1)
       </span>
       <span
         className="font-weight-bold"
@@ -82,9 +74,8 @@ Array [
         className="ml-2 mr-2"
       >
         15
-         (
-        +1
-        )
+         
+        (+1)
       </span>
     </div>
   </div>,
@@ -212,7 +203,7 @@ Array [
       <span
         className="ml-2"
       >
-        14
+        +1
       </span>
     </div>
   </div>,

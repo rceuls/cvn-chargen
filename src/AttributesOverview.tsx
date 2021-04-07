@@ -25,13 +25,15 @@ const AttributesOverview = ({
       <div className="row">
         <div className="col-sm-12">
           {attributeOrder.map((a: CharacterAttributes, ix: number) => {
+            const mod = getModifier(attributes[+a]);
             return (
               <React.Fragment key={`ca${ix}`}>
                 <span className="font-weight-bold">
                   {CharacterAttributes[a]}
                 </span>
                 <span className="ml-2 mr-2">
-                  {attributes[+a]} ({formatBonus(getModifier(attributes[+a]))})
+                  {attributes[+a]}{' '}
+                  {mod !== 0 ? '(' + formatBonus(mod) + ')' : <></>}
                 </span>
               </React.Fragment>
             );
