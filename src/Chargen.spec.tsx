@@ -32,7 +32,7 @@ const genChar: ICharacter = {
         'Wineskin/Waterskin',
         'Winter Blanket',
         'Rations, Dry, one week',
-        'Sack, Large',
+        'Sack, large',
         'Sacks, small (2)',
         '60 gold pieces',
       ],

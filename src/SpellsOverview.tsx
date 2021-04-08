@@ -1,4 +1,5 @@
-import { getSRDLink, ILinkedItem } from './services/util';
+import { ILinkedItem } from './services/model';
+import { getSRDLink } from './services/util';
 
 const SpellsOverview = ({ data }: { data: ILinkedItem[] }) => {
   if (data.length) {

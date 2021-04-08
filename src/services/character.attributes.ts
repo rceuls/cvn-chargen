@@ -1,4 +1,4 @@
-import { CharacterAttributes } from './character.classes';
+import { CharacterAttributes, IExtraAttributes } from './model';
 
 const getOpenDoors = (strValue: number) => {
   if (strValue <= 8) return '1-in-6';
@@ -90,12 +90,3 @@ export const getExtraAttributes: (attr: number[]) => IExtraAttributes = (
     retainerLoyality: social.retainerLoyality,
   };
 };
-
-export interface IExtraAttributes {
-  spokenLanguages: string;
-  literacy: string;
-  openDoors: string;
-  npcReaction: string;
-  maxRetainers: string;
-  retainerLoyality: string;
-}

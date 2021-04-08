@@ -1,25 +1,8 @@
-import {
-  CharacterAttributes,
-  getClass,
-  ICharacterClass,
-} from './character.classes';
-import { names } from './names';
+import { getClass } from './character.classes';
+import { names } from './data/names';
 import { getModifier, getRndInteger, getRndValue } from './util';
-import { backgrounds, personalities, clothes, mannerisms } from './traits';
-
-export interface ICharacter {
-  armorClass: number;
-  name: string;
-  charClass: ICharacterClass;
-  attributeScores: number[];
-  maximumHP: number;
-  traits: {
-    personality: string;
-    background: string;
-    clothes: string;
-    mannerism: string;
-  };
-}
+import { backgrounds, personalities, clothes, mannerisms } from './data/traits';
+import { CharacterAttributes } from './model';
 
 const getAttribute = () => {
   const sorted = Array.from(Array(4).keys())

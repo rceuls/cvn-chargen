@@ -1,4 +1,4 @@
-import { ILinkedItem } from './util';
+import { ILinkedItem } from '../model';
 
 export const spellReadMagic: ILinkedItem = {
   label: 'Read Magic',

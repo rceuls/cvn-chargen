@@ -1,4 +1,4 @@
-import { CharacterAttributes } from './services/character.classes';
+import { CharacterAttributes } from './services/model';
 import { formatBonus, getModifier } from './services/util';
 
 const CombatStats = ({

@@ -1,4 +1,4 @@
-import { ICharacter } from './services/character.generator';
+import { ICharacter } from './services/model';
 
 const ExtraPersonalia = ({ character }: { character: ICharacter }) => {
   return (

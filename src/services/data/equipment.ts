@@ -1,10 +1,6 @@
 import { spells } from './spells';
-import { getRndInteger } from './util';
-
-export interface IEquipmentPack {
-  equipment: string[];
-  acMod: number;
-}
+import { getRndInteger } from '../util';
+import { IEquipmentPack } from '../model';
 
 const basePack = [
   'Backpack',
@@ -13,7 +9,7 @@ const basePack = [
   'Wineskin/Waterskin',
   'Winter Blanket',
   'Rations, Dry, one week',
-  'Sack, Large',
+  'Sack, large',
   'Sacks, small (2)',
   `${getRndInteger(1, 6) * 10} gold pieces`,
 ];

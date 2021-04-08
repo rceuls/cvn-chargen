@@ -1,5 +1,5 @@
 import { generateCharacter } from './character.generator';
-import { names } from './names';
+import { names } from './data/names';
 
 it('character generator works', () => {
   const d = generateCharacter();

@@ -1,32 +1,19 @@
 import {
   clericPacks,
   fighterPacks,
-  IEquipmentPack,
   magicUserPacks,
   thiefPacks,
-} from './equipment';
-import { gods } from './gods';
+} from './data/equipment';
+import { gods } from './data/gods';
 import {
   imagesDwarves,
   imagesElf,
   imagesHalflings,
   imagesHuman,
-} from './portraits';
-import { spellReadMagic, spells } from './spells';
-import { getRndValue, ILinkedItem } from './util';
-
-export interface ICharacterClass {
-  name: string;
-  startingHP: number;
-  savingThrows: number[];
-  url: string;
-  abilities: string[];
-  suffix?: string;
-  equipment: IEquipmentPack;
-  image: string;
-  bonusXP: (attributes: number[]) => string;
-  spells?: ILinkedItem[];
-}
+} from './data/portraits';
+import { spellReadMagic, spells } from './data/spells';
+import { CharacterAttributes, ICharacterClass } from './model';
+import { getRndValue } from './util';
 
 export const calculateBaseBonusXP = (attrVal: number) => {
   if (attrVal <= 5) return '-20%';
@@ -36,15 +23,6 @@ export const calculateBaseBonusXP = (attrVal: number) => {
   if (attrVal <= 18) return '+10%';
   return '0%';
 };
-
-export enum CharacterAttributes {
-  STR,
-  DEX,
-  CON,
-  INT,
-  WIS,
-  CHA,
-}
 
 export const cleric: ICharacterClass = {
   name: 'Cleric',

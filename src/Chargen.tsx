@@ -1,11 +1,11 @@
 import AttributesOverview from './AttributesOverview';
-import { ICharacter } from './services/character.generator';
 import CombatStats from './CombatStats';
 import SavingThrows from './SavingThrows';
 import GenericArrayOverview from './GenericArrayOverview';
 import SpellsOverview from './SpellsOverview';
 import Personalia from './Personalia';
 import ExtraPersonalia from './ExtraPersonalia';
+import { ICharacter } from './services/model';
 
 const Chargen = ({ genChar }: { genChar: ICharacter }) => {
   return (
