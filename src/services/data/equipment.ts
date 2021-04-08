@@ -11,7 +11,7 @@ const basePack = [
   'Rations, Dry, one week',
   'Sack, large',
   'Sacks, small (2)',
-  `${getRndInteger(1, 6) * 10} gold pieces`,
+  `${getRndInteger(1, 3) * 10} gold pieces`,
 ];
 
 export const fighterPacks: IEquipmentPack[] = [
