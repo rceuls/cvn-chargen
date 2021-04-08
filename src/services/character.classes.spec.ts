@@ -34,13 +34,34 @@ it('bonusXP calculationworks', () => {
 });
 
 it('Get str classes', () => {
-  expect(getClass([18, 10, 10, 10, 10, 10])).toEqual([fighter, dwarf, elf]);
-  expect(getClass([18, 10, 10, 8, 10, 10])).toEqual([fighter, dwarf]);
-  expect(getClass([18, 10, 8, 10, 10, 10])).toEqual([fighter, elf]);
+  expect(getClass([18, 10, 10, 10, 10, 10])).toEqual([
+    fighter,
+    fighter,
+    fighter,
+    dwarf,
+    elf,
+  ]);
+  expect(getClass([18, 10, 10, 8, 10, 10])).toEqual([
+    fighter,
+    fighter,
+    fighter,
+    dwarf,
+  ]);
+  expect(getClass([18, 10, 8, 10, 10, 10])).toEqual([
+    fighter,
+    fighter,
+    fighter,
+    elf,
+  ]);
 });
 it('Get dex classes', () => {
-  expect(getClass([10, 15, 10, 10, 10, 10])).toEqual([thief, halfling]);
-  expect(getClass([10, 15, 8, 10, 10, 10])).toEqual([thief]);
+  expect(getClass([10, 15, 10, 10, 10, 10])).toEqual([
+    thief,
+    thief,
+    thief,
+    halfling,
+  ]);
+  expect(getClass([10, 15, 8, 10, 10, 10])).toEqual([thief, thief, thief]);
 });
 it('Get con classes', () => {
   expect(getClass([10, 10, 11, 10, 10, 10])).toEqual([dwarf, halfling]);

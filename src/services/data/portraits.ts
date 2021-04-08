@@ -32,8 +32,6 @@ export const steampunksImages = Array.from(Array(7).keys()).map(
   (x) => `TCP Steampunk ${x + 1}.jpg`
 );
 
-export const toonsImages = ['TCP Toon 1.jpg'];
-
 export const vampiresImages = Array.from(Array(5).keys()).map(
   (x) => `TCP Vampire ${x + 1}.jpg`
 );
@@ -45,7 +43,6 @@ export const zombiesImages = Array.from(Array(6).keys()).map(
 export const imagesHuman = [
   ...zombiesImages,
   ...vampiresImages,
-  ...toonsImages,
   ...steampunksImages,
   ...scaryImages,
   ...piratesImages,
