@@ -6,7 +6,32 @@
 
 OSE character generator. [Github Page](https://rceuls.github.io/cvn-chargen/).
 
-# Sources
+## Local installation
+
+1. Get a recent node version and yarn.
+2. `yarn install`
+3. `yarn run start`
+
+This is a standard `create-react-app`, original readme is at README.orig.md
+
+## Usage
+
+After running the project, the URL is displayed. Click on it, a random character is generated using my own houserules. Feel free to adjust.
+
+### Houserules
+
+1. 4d6 drop lowest, in order
+2. prefer human classes (fighter, cleric, magic-user)
+
+## Organisation
+
+The entrypoint of the character generator is in `./src/services/character.generator.ts`. Best start from there. Rest of the code should be pretty readable.
+
+### Contributing
+
+Pull requests welcome. Before making big changes, feel free to file a ticket for improvement so we can talk this over.
+
+## Sources
 
 - Equipment packs from <https://basicfantasy.org/downloads.html>
 - Names from <https://medium.com/@barelyharebooks/a-master-list-of-300-fantasy-names-characters-towns-and-villages-47c113f6a90b>
