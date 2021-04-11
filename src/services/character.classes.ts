@@ -177,7 +177,7 @@ export const getClass = (attributes: number[]) => {
 };
 
 const getStrengthClasses = (attributes: number[]) => {
-  const avClasses: ICharacterClass[] = [fighter];
+  const avClasses: ICharacterClass[] = [fighter, fighter, fighter];
   if (attributes[+CharacterAttributes.CON] > 9) {
     avClasses.push(dwarf);
   }
@@ -188,7 +188,7 @@ const getStrengthClasses = (attributes: number[]) => {
 };
 
 const getDexClasses = (attributes: number[]) => {
-  const avClasses: ICharacterClass[] = [thief];
+  const avClasses: ICharacterClass[] = [thief, thief, thief];
   if (attributes[+CharacterAttributes.CON] > 9) {
     avClasses.push(halfling);
   }
