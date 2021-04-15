@@ -17,45 +17,45 @@ const basePack = [
 export const fighterPacks: IEquipmentPack[] = [
   {
     equipment: [
-      'Chain Mail (AC 14)',
-      'Shield (AC +1)',
+      'Chain Mail and Shield (AC 4)',
+      'Shield',
       'Longsword (1d8 + STR)',
       ...basePack,
     ],
-    acMod: +5,
+    acMod: -6,
   },
   {
     equipment: [
-      'Chain Mail (AC 14)',
+      'Chain Mail (AC 5)',
       'Polearm (1d10 + STR, two handed, brace, slow)',
       ...basePack,
     ],
-    acMod: +4,
+    acMod: -5,
   },
   {
     equipment: [
-      'Leather Armor (AC 12)',
+      'Leather Armor (AC 7)',
       'Longsword (1d8 + STR)',
       "Shortbow (1d6, 50' (+1 to hit)/100'/150' (-1 to hit))",
       'Quiver with 30 arrows',
       ...basePack,
     ],
-    acMod: +2,
+    acMod: -3,
   },
 ];
 
 export const elfPacks: IEquipmentPack[] = [
   {
     equipment: [`Spellbook`, ...fighterPacks[0].equipment],
-    acMod: +5,
+    acMod: -6,
   },
   {
     equipment: ['Spellbook', ...fighterPacks[1].equipment],
-    acMod: +4,
+    acMod: -5,
   },
   {
     equipment: ['Spellbook', ...fighterPacks[2].equipment],
-    acMod: +2,
+    acMod: -3,
   },
 ];
 
@@ -85,18 +85,18 @@ export const magicUserPacks: IEquipmentPack[] = [
 export const clericPacks: IEquipmentPack[] = [
   {
     equipment: [
-      'Leather armor (AC 12)',
+      'Leather armor (AC 7)',
       'Shield (AC +1)',
       'Holy Symbol',
       'Vial of holy water',
       'Mace (1d6 + STR)',
       ...basePack,
     ],
-    acMod: +3,
+    acMod: -4,
   },
   {
     equipment: [
-      'Leather armor (AC 12)',
+      'Leather armor (AC 7)',
       "Sling (1d4, 40'(+1 to hit)/80'/160' (-1 to hit))",
       '30 sling bullets in pouch',
       'Holy Symbol',
@@ -104,20 +104,20 @@ export const clericPacks: IEquipmentPack[] = [
       'Mace (1d6 + STR)',
       ...basePack,
     ],
-    acMod: +2,
+    acMod: -3,
   },
 ];
 
 export const thiefPacks: IEquipmentPack[] = [
   {
     equipment: [
-      'Leather armor (AC 12)',
+      'Leather armor (AC 7)',
       "Thieves' tools",
       'Shortsword (1d6 + STR)',
       "2 Daggers (1d4 + STR, 10'(+1 to hit)/20'/30' (-1 to hit))",
       "Silken Rope, 50'",
       ...basePack,
     ],
-    acMod: +2,
+    acMod: -3,
   },
 ];

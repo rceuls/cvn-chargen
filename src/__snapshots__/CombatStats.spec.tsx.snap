@@ -11,12 +11,12 @@ Array [
       <span
         className="font-weight-bold"
       >
-        Base Attack Bonus (melee, ranged)
+        THAC0 (melee, ranged)
       </span>
       <span
         className="ml-2"
       >
-        +0 (
+        19 (
         -1
         ,
         +3

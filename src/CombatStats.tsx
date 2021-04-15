@@ -14,11 +14,9 @@ const CombatStats = ({
     <>
       <div className="row">
         <div className="col-sm">
-          <span className="font-weight-bold">
-            Base Attack Bonus (melee, ranged)
-          </span>
+          <span className="font-weight-bold">THAC0 (melee, ranged)</span>
           <span className="ml-2">
-            +0 (
+            19 (
             {formatBonus(
               getModifier(character.attributeScores[+CharacterAttributes.STR])
             )}

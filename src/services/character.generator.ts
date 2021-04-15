@@ -22,7 +22,7 @@ export const generateCharacter = () => {
     selectedClass = getRndValue(getClass(attributes));
   }
   const hp =
-    getRndInteger(3, selectedClass.startingHP) +
+    selectedClass.startingHP +
     getModifier(attributes[+CharacterAttributes.CON]);
   return {
     name: getRndValue(names),
@@ -37,7 +37,7 @@ export const generateCharacter = () => {
     },
     armorClass:
       10 +
-      selectedClass.equipment.acMod +
+      selectedClass.equipment.acMod -
       getModifier(attributes[+CharacterAttributes.DEX]),
   };
 };

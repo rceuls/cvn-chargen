@@ -24,7 +24,7 @@ const genChar: ICharacter = {
     ],
     equipment: {
       equipment: [
-        'Chain Mail (AC 14)',
+        'Chain Mail (AC 5)',
         'Polearm (1d10 + STR, two handed, brace, slow)',
         'Backpack',
         'Torches (6)',
